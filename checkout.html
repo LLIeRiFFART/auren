@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout — Auren</title>
+  <meta name="description" content="Demonstration checkout for the Auren portfolio store.">
+  <meta name="theme-color" content="#191C22">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/sora-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/checkout.js" defer></script>
+</head>
+<body class="page-checkout">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <a class="logo" href="index.html" aria-label="Auren — home">
+        <svg class="logo__mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="#974761"/></svg>
+        <span class="logo__word">Auren</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+        <ul class="site-nav__list">
+          <li><a href="catalog.html">Shop all</a></li>
+          <li><a href="catalog.html?category=over-ear">Over-ear</a></li>
+          <li><a href="catalog.html?category=earbuds">Earbuds</a></li>
+          <li><a href="catalog.html?category=studio">Studio</a></li>
+          <li><a href="catalog.html?category=gaming">Gaming</a></li>
+          <li><a href="catalog.html?category=in-ear">In-ear</a></li>
+          <li><a href="help.html">Help</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="icon-button" href="catalog.html?focus=search" aria-label="Search the catalogue">
+          <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m13.2 13.2 3.8 3.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </a>
+        <a class="icon-button cart-link" href="cart.html" aria-label="Cart, 0 items" data-cart-link>
+          <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 6.5h11l.8 10h-12.6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7.2 8.5V5.8a2.8 2.8 0 0 1 5.6 0v2.7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span class="cart-link__count" data-cart-count hidden>0</span>
+        </a>
+        <button class="icon-button nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="sr-only">Menu</span>
+          <svg class="icon nav-toggle__icon" viewBox="0 0 20 20" aria-hidden="true"><path class="nav-toggle__line nav-toggle__line--top" d="M3 7h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path class="nav-toggle__line nav-toggle__line--bottom" d="M3 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="theme-light">
+    <div class="container checkout" data-checkout>
+      <header class="page-head page-head--plain">
+        <h1 class="page-title">Checkout</h1>
+        <p class="notice notice--inline"><strong>Demonstration checkout.</strong> No payment is taken and nothing is sent to a server — please don’t enter real card details.</p>
+      </header>
+
+      <div class="checkout__layout">
+        <form class="checkout__form" novalidate data-checkout-form>
+          <p class="form-summary" role="alert" hidden data-form-summary></p>
+
+          <fieldset class="form-section">
+            <legend>Contact</legend>
+            <div class="form-grid">
+              <div class="field" data-field>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" inputmode="email" data-validate="email" data-label="Email" required aria-describedby="email-error">
+                <p class="field__error" id="email-error" hidden></p>
+              </div>
+              <div class="field" data-field>
+                <label for="phone">Phone <span class="field__optional">(optional)</span></label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" data-validate="phone" data-label="Phone" aria-describedby="phone-error">
+                <p class="field__error" id="phone-error" hidden></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Shipping address</legend>
+            <div class="form-grid">
+              <div class="field" data-field>
+                <label for="firstName">First name</label>
+                <input id="firstName" name="firstName" type="text" autocomplete="given-name" data-label="First name" required aria-describedby="firstName-error">
+                <p class="field__error" id="firstName-error" hidden></p>
+              </div>
+              <div class="field" data-field>
+                <label for="lastName">Last name</label>
+                <input id="lastName" name="lastName" type="text" autocomplete="family-name" data-label="Last name" required aria-describedby="lastName-error">
+                <p class="field__error" id="lastName-error" hidden></p>
+              </div>
+              <div class="field field--wide" data-field>
+                <label for="address">Street address</label>
+                <input id="address" name="address" type="text" autocomplete="address-line1" data-label="Street address" required aria-describedby="address-error">
+                <p class="field__error" id="address-error" hidden></p>
+              </div>
+              <div class="field field--wide" data-field>
+                <label for="apartment">Apartment, suite <span class="field__optional">(optional)</span></label>
+                <input id="apartment" name="apartment" type="text" autocomplete="address-line2" data-label="Apartment, suite" aria-describedby="apartment-error">
+                <p class="field__error" id="apartment-error" hidden></p>
+              </div>
+              <div class="field" data-field>
+                <label for="city">City</label>
+                <input id="city" name="city" type="text" autocomplete="address-level2" data-label="City" required aria-describedby="city-error">
+                <p class="field__error" id="city-error" hidden></p>
+              </div>
+              <div class="field" data-field>
+                <label for="region">State / region</label>
+                <input id="region" name="region" type="text" autocomplete="address-level1" data-label="State / region" required aria-describedby="region-error">
+                <p class="field__error" id="region-error" hidden></p>
+              </div>
+              <div class="field" data-field>
+                <label for="zip">ZIP / postal code</label>
+                <input id="zip" name="zip" type="text" autocomplete="postal-code" data-validate="zip" data-label="ZIP / postal code" required aria-describedby="zip-error">
+                <p class="field__error" id="zip-error" hidden></p>
+              </div>
+              <div class="field" data-field>
+                <label for="country">Country</label>
+                <select id="country" name="country" autocomplete="country-name" data-label="Country" required>
+                  <option>United States</option>
+                  <option>Canada</option>
+                  <option>United Kingdom</option>
+                  <option>Germany</option>
+                  <option>France</option>
+                  <option>Netherlands</option>
+                  <option>Australia</option>
+                  <option>Japan</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Delivery</legend>
+            <div class="choice-list">
+              <label class="choice">
+                <input type="radio" name="delivery" value="standard" checked>
+                <span class="choice__body">
+                  <span class="choice__title">Standard</span>
+                  <span class="choice__text">3–5 business days, tracked</span>
+                </span>
+                <span class="choice__price" data-standard-price>Free</span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="delivery" value="express">
+                <span class="choice__body">
+                  <span class="choice__title">Express</span>
+                  <span class="choice__text">1–2 business days, signature on delivery</span>
+                </span>
+                <span class="choice__price">$18</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Payment</legend>
+            <div class="form-section__aside">
+              <p>Use the demo card to try the flow. Card details never leave your browser.</p>
+              <button class="btn btn--ghost btn--sm" type="button" data-demo-card>Fill in demo card</button>
+            </div>
+            <div class="form-grid">
+              <div class="field field--wide" data-field>
+                <label for="cardName">Name on card</label>
+                <input id="cardName" name="cardName" type="text" autocomplete="cc-name" data-label="Name on card" required aria-describedby="cardName-error">
+                <p class="field__error" id="cardName-error" hidden></p>
+              </div>
+              <div class="field field--wide" data-field>
+                <label for="cardNumber">Card number</label>
+                <input id="cardNumber" name="cardNumber" type="text" autocomplete="cc-number" inputmode="numeric" placeholder="4242 4242 4242 4242" maxlength="23" data-validate="card" data-label="Card number" required aria-describedby="cardNumber-error">
+                <p class="field__error" id="cardNumber-error" hidden></p>
+              </div>
+              <div class="field" data-field>
+                <label for="cardExpiry">Expiry date</label>
+                <input id="cardExpiry" name="cardExpiry" type="text" autocomplete="cc-exp" inputmode="numeric" placeholder="MM/YY" maxlength="7" data-validate="expiry" data-label="Expiry date" required aria-describedby="cardExpiry-error">
+                <p class="field__error" id="cardExpiry-error" hidden></p>
+              </div>
+              <div class="field" data-field>
+                <label for="cardCvc">Security code</label>
+                <input id="cardCvc" name="cardCvc" type="text" autocomplete="cc-csc" inputmode="numeric" placeholder="CVC" maxlength="4" data-validate="cvc" data-label="Security code" required aria-describedby="cardCvc-error">
+                <p class="field__error" id="cardCvc-error" hidden></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <button class="btn btn--primary btn--lg btn--block" type="submit">Place demo order</button>
+          <p class="checkout__legal">By placing this demo order you are not buying anything. See our <a href="help.html#terms">terms</a>.</p>
+        </form>
+
+        <aside class="summary summary--sticky" aria-labelledby="summary-title" data-summary></aside>
+      </div>
+    </div>
+
+    <div class="container" data-checkout-empty hidden>
+      <div class="empty-state">
+        <h1 class="empty-state__title">There’s nothing to check out yet</h1>
+        <p>Add a pair of headphones to your cart and come back here.</p>
+        <a class="btn btn--primary" href="catalog.html">Browse all headphones</a>
+      </div>
+    </div>
+
+    <div class="container confirmation" data-confirmation hidden></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div class="site-footer__brand">
+        <a class="logo" href="index.html" aria-label="Auren — home">
+          <svg class="logo__mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="#974761"/></svg>
+          <span class="logo__word">Auren</span>
+        </a>
+        <p>Headphones designed, tuned and serviced by one small team. Built to be repaired, not replaced.</p>
+      </div>
+
+      <nav class="site-footer__nav" aria-labelledby="footer-shop">
+        <h2 id="footer-shop">Shop</h2>
+        <ul>
+          <li><a href="catalog.html">All headphones</a></li>
+          <li><a href="catalog.html?category=over-ear">Wireless over-ear</a></li>
+          <li><a href="catalog.html?category=earbuds">True wireless earbuds</a></li>
+          <li><a href="catalog.html?category=studio">Studio &amp; hi-fi</a></li>
+          <li><a href="catalog.html?category=gaming">Gaming</a></li>
+          <li><a href="catalog.html?category=in-ear">In-ear monitors</a></li>
+        </ul>
+      </nav>
+
+      <nav class="site-footer__nav" aria-labelledby="footer-support">
+        <h2 id="footer-support">Support</h2>
+        <ul>
+          <li><a href="help.html#shipping">Shipping</a></li>
+          <li><a href="help.html#returns">Returns</a></li>
+          <li><a href="help.html#warranty">Warranty &amp; repairs</a></li>
+          <li><a href="help.html#faq">Questions</a></li>
+          <li><a href="help.html#contact">Contact us</a></li>
+          <li><a href="cart.html">Your cart</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__nav">
+        <h2>Contact</h2>
+        <address>
+          <a href="https://auren.com">auren.com</a><br>
+          <a href="tel:+15550132040">+1 (555) 013-2040</a><br>
+          Mon–Fri, 9 am – 6 pm ET<br>
+          48 Foundry Lane, Portland, ME 04101
+        </address>
+      </div>
+    </div>
+
+    <div class="container site-footer__bottom">
+      <p>© <span data-copyright-year>2027</span> Auren Audio.</p>
+      <ul>
+        <li><a href="https://artempunin.vercel.app/">Created by Artem Punin</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="toast-region" aria-live="polite" aria-atomic="true" data-toasts></div>
+</body>
+</html>

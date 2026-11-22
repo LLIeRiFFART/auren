@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auren — Headphones, engineered quietly</title>
+  <meta name="description" content="Auren designs wireless, studio, gaming and in-ear headphones. Meet Meridian One: adaptive noise cancelling in machined aluminium.">
+  <meta name="theme-color" content="#191C22">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/sora-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/home.js" defer></script>
+</head>
+<body class="page-home">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <a class="logo" href="index.html" aria-label="Auren — home">
+        <svg class="logo__mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="#974761"/></svg>
+        <span class="logo__word">Auren</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+        <ul class="site-nav__list">
+          <li><a href="catalog.html">Shop all</a></li>
+          <li><a href="catalog.html?category=over-ear">Over-ear</a></li>
+          <li><a href="catalog.html?category=earbuds">Earbuds</a></li>
+          <li><a href="catalog.html?category=studio">Studio</a></li>
+          <li><a href="catalog.html?category=gaming">Gaming</a></li>
+          <li><a href="catalog.html?category=in-ear">In-ear</a></li>
+          <li><a href="help.html">Help</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="icon-button" href="catalog.html?focus=search" aria-label="Search the catalogue">
+          <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m13.2 13.2 3.8 3.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </a>
+        <a class="icon-button cart-link" href="cart.html" aria-label="Cart, 0 items" data-cart-link>
+          <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 6.5h11l.8 10h-12.6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7.2 8.5V5.8a2.8 2.8 0 0 1 5.6 0v2.7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span class="cart-link__count" data-cart-count hidden>0</span>
+        </a>
+        <button class="icon-button nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="sr-only">Menu</span>
+          <svg class="icon nav-toggle__icon" viewBox="0 0 20 20" aria-hidden="true"><path class="nav-toggle__line nav-toggle__line--top" d="M3 7h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path class="nav-toggle__line nav-toggle__line--bottom" d="M3 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__backdrop" aria-hidden="true"></div>
+
+      <div class="hero__visual" role="img" aria-label="Meridian One wireless headphones in graphite with spun aluminium caps and a burgundy ring" data-hero-visual>
+      </div>
+
+      <div class="container hero__content">
+        <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>New · Meridian One</p>
+        <h1 class="hero__title" id="hero-title">Quiet has a new reference</h1>
+        <p class="hero__lead">A 40&nbsp;mm beryllium driver, eight-microphone adaptive noise cancelling and 60 hours of battery — in a housing machined from aluminium.</p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="product.html?id=meridian-one">Shop Meridian One <span class="btn__meta">$449</span></a>
+          <a class="btn btn--ghost btn--lg" href="catalog.html">Browse all headphones</a>
+        </div>
+
+        <dl class="hero__stats">
+          <div><dt>Battery</dt><dd><span class="sr-only">60 h</span><span aria-hidden="true"><span data-count-to="60">60</span> h</span></dd></div>
+          <div><dt>Noise cancelling</dt><dd><span class="sr-only">8 mics</span><span aria-hidden="true"><span data-count-to="8">8</span> mics</span></dd></div>
+          <div><dt>Weight</dt><dd><span class="sr-only">286 g</span><span aria-hidden="true"><span data-count-to="286">286</span> g</span></dd></div>
+        </dl>
+      </div>
+
+    </section>
+
+    <section class="categories" aria-labelledby="categories-title">
+      <div class="container">
+        <h2 class="categories__title" id="categories-title">Shop by category</h2>
+        <ul class="categories__list" data-categories></ul>
+      </div>
+    </section>
+
+    <section class="featured theme-light" aria-labelledby="featured-title">
+      <div class="container">
+        <header class="section-head">
+          <div>
+            <h2 class="section-title" id="featured-title">Six ways to listen</h2>
+          </div>
+          <a class="link-arrow" href="catalog.html">View all models <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9.5M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </header>
+        <ul class="product-grid product-grid--three" data-featured></ul>
+      </div>
+    </section>
+
+    <section class="anatomy" aria-labelledby="anatomy-title" data-anatomy>
+      <div class="anatomy__sticky">
+        <div class="anatomy__panel">
+          <h2 class="section-title" id="anatomy-title">Precision in every layer</h2>
+          <p class="anatomy__intro">Every part of the earcup earns its place. Take it apart, one layer at a time.</p>
+
+          <ol class="anatomy__parts">
+            <li class="anatomy-part">
+              <h3 class="anatomy-part__heading">
+                <button class="anatomy-part__head" type="button" aria-expanded="false" aria-controls="anatomy-part-1" data-part="0">
+                  <span class="anatomy-part__number" aria-hidden="true">01</span>
+                  <span class="anatomy-part__name">Spun aluminium cap</span>
+                </button>
+              </h3>
+              <div class="anatomy-part__body" id="anatomy-part-1">
+                <p>Machined from a single billet, then spun-finished so light travels around it. The whole surface is a touch control for volume, tracks and calls.</p>
+              </div>
+            </li>
+            <li class="anatomy-part">
+              <h3 class="anatomy-part__heading">
+                <button class="anatomy-part__head" type="button" aria-expanded="false" aria-controls="anatomy-part-2" data-part="1">
+                  <span class="anatomy-part__number" aria-hidden="true">02</span>
+                  <span class="anatomy-part__name">Microphone ring</span>
+                </button>
+              </h3>
+              <div class="anatomy-part__body" id="anatomy-part-2">
+                <p>An anodised ring carries eight microphones behind micro-perforations. They sample the world 48,000 times a second for noise cancelling and clear calls.</p>
+              </div>
+            </li>
+            <li class="anatomy-part">
+              <h3 class="anatomy-part__heading">
+                <button class="anatomy-part__head" type="button" aria-expanded="false" aria-controls="anatomy-part-3" data-part="2">
+                  <span class="anatomy-part__number" aria-hidden="true">03</span>
+                  <span class="anatomy-part__name">Sealed housing</span>
+                </button>
+              </h3>
+              <div class="anatomy-part__body" id="anatomy-part-3">
+                <p>A glass-reinforced composite shell forms a tuned 32 cc acoustic chamber. Its mass and inner ribbing keep resonance out of the music.</p>
+              </div>
+            </li>
+            <li class="anatomy-part">
+              <h3 class="anatomy-part__heading">
+                <button class="anatomy-part__head" type="button" aria-expanded="false" aria-controls="anatomy-part-4" data-part="3">
+                  <span class="anatomy-part__number" aria-hidden="true">04</span>
+                  <span class="anatomy-part__name">Logic board and battery</span>
+                </button>
+              </h3>
+              <div class="anatomy-part__body" id="anatomy-part-4">
+                <p>The audio processor, a 32-bit DAC and a 680 mAh cell in each cup. Sixty hours with noise cancelling on; five minutes of charge returns four hours.</p>
+              </div>
+            </li>
+            <li class="anatomy-part">
+              <h3 class="anatomy-part__heading">
+                <button class="anatomy-part__head" type="button" aria-expanded="false" aria-controls="anatomy-part-5" data-part="4">
+                  <span class="anatomy-part__number" aria-hidden="true">05</span>
+                  <span class="anatomy-part__name">40 mm beryllium driver</span>
+                </button>
+              </h3>
+              <div class="anatomy-part__body" id="anatomy-part-5">
+                <p>A beryllium-coated diaphragm on a free-edge surround, driven by a neodymium magnet. Stiff, light and fast: 4 Hz to 40 kHz with under 0.1% distortion.</p>
+              </div>
+            </li>
+            <li class="anatomy-part">
+              <h3 class="anatomy-part__heading">
+                <button class="anatomy-part__head" type="button" aria-expanded="false" aria-controls="anatomy-part-6" data-part="5">
+                  <span class="anatomy-part__number" aria-hidden="true">06</span>
+                  <span class="anatomy-part__name">Acoustic baffle</span>
+                </button>
+              </h3>
+              <div class="anatomy-part__body" id="anatomy-part-6">
+                <p>A damped baffle angles the driver towards the ear canal. Its woven mesh evens out airflow and protects the diaphragm.</p>
+              </div>
+            </li>
+            <li class="anatomy-part">
+              <h3 class="anatomy-part__heading">
+                <button class="anatomy-part__head" type="button" aria-expanded="false" aria-controls="anatomy-part-7" data-part="6">
+                  <span class="anatomy-part__number" aria-hidden="true">07</span>
+                  <span class="anatomy-part__name">Memory-foam cushion</span>
+                </button>
+              </h3>
+              <div class="anatomy-part__body" id="anatomy-part-7">
+                <p>Slow-rebound foam in protein leather seals without pressure. Cushions attach magnetically, so replacing them takes seconds, not tools.</p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="anatomy__actions">
+            <a class="btn btn--primary" href="product.html?id=meridian-one">Shop Meridian One <span class="btn__meta">$449</span></a>
+            <a class="link-arrow" href="product.html?id=meridian-one#specs">Full specifications <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9.5M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+
+        <div class="anatomy__scene" data-anatomy-scene>
+          <div class="anatomy__presentation" data-anatomy-presentation>
+            <div class="anatomy__stage" id="anatomy-stage" data-anatomy-stage>
+              <div class="anatomy__hotspots" data-anatomy-hotspots></div>
+            </div>
+            <div class="anatomy__toggle-wrap" data-anatomy-toggle-wrap hidden>
+              <button class="btn btn--primary btn--sm anatomy__toggle" type="button" data-anatomy-toggle aria-controls="anatomy-stage" aria-pressed="true">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5zM3 12l9 5 9-5M3 16l9 5 9-5"/></svg>
+                <span data-anatomy-toggle-label>Reassemble</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div class="site-footer__brand">
+        <a class="logo" href="index.html" aria-label="Auren — home">
+          <svg class="logo__mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="#974761"/></svg>
+          <span class="logo__word">Auren</span>
+        </a>
+        <p>Headphones designed, tuned and serviced by one small team. Built to be repaired, not replaced.</p>
+      </div>
+
+      <nav class="site-footer__nav" aria-labelledby="footer-shop">
+        <h2 id="footer-shop">Shop</h2>
+        <ul>
+          <li><a href="catalog.html">All headphones</a></li>
+          <li><a href="catalog.html?category=over-ear">Wireless over-ear</a></li>
+          <li><a href="catalog.html?category=earbuds">True wireless earbuds</a></li>
+          <li><a href="catalog.html?category=studio">Studio &amp; hi-fi</a></li>
+          <li><a href="catalog.html?category=gaming">Gaming</a></li>
+          <li><a href="catalog.html?category=in-ear">In-ear monitors</a></li>
+        </ul>
+      </nav>
+
+      <nav class="site-footer__nav" aria-labelledby="footer-support">
+        <h2 id="footer-support">Support</h2>
+        <ul>
+          <li><a href="help.html#shipping">Shipping</a></li>
+          <li><a href="help.html#returns">Returns</a></li>
+          <li><a href="help.html#warranty">Warranty &amp; repairs</a></li>
+          <li><a href="help.html#faq">Questions</a></li>
+          <li><a href="help.html#contact">Contact us</a></li>
+          <li><a href="cart.html">Your cart</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__nav">
+        <h2>Contact</h2>
+        <address>
+          <a href="https://auren.com">auren.com</a><br>
+          <a href="tel:+15550132040">+1 (555) 013-2040</a><br>
+          Mon–Fri, 9 am – 6 pm ET<br>
+          48 Foundry Lane, Portland, ME 04101
+        </address>
+      </div>
+    </div>
+
+    <div class="container site-footer__bottom">
+      <p>© <span data-copyright-year>2027</span> Auren Audio.</p>
+      <ul>
+        <li><a href="https://artempunin.vercel.app/">Created by Artem Punin</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="toast-region" aria-live="polite" aria-atomic="true" data-toasts></div>
+</body>
+</html>

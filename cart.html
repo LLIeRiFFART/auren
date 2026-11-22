@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your cart — Auren</title>
+  <meta name="description" content="Review the headphones in your Auren cart.">
+  <meta name="theme-color" content="#191C22">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/sora-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/cart.js" defer></script>
+</head>
+<body class="page-cart">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <a class="logo" href="index.html" aria-label="Auren — home">
+        <svg class="logo__mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="#974761"/></svg>
+        <span class="logo__word">Auren</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+        <ul class="site-nav__list">
+          <li><a href="catalog.html">Shop all</a></li>
+          <li><a href="catalog.html?category=over-ear">Over-ear</a></li>
+          <li><a href="catalog.html?category=earbuds">Earbuds</a></li>
+          <li><a href="catalog.html?category=studio">Studio</a></li>
+          <li><a href="catalog.html?category=gaming">Gaming</a></li>
+          <li><a href="catalog.html?category=in-ear">In-ear</a></li>
+          <li><a href="help.html">Help</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="icon-button" href="catalog.html?focus=search" aria-label="Search the catalogue">
+          <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m13.2 13.2 3.8 3.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </a>
+        <a class="icon-button cart-link" href="cart.html" aria-label="Cart, 0 items" data-cart-link>
+          <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 6.5h11l.8 10h-12.6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7.2 8.5V5.8a2.8 2.8 0 0 1 5.6 0v2.7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span class="cart-link__count" data-cart-count hidden>0</span>
+        </a>
+        <button class="icon-button nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="sr-only">Menu</span>
+          <svg class="icon nav-toggle__icon" viewBox="0 0 20 20" aria-hidden="true"><path class="nav-toggle__line nav-toggle__line--top" d="M3 7h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path class="nav-toggle__line nav-toggle__line--bottom" d="M3 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="theme-light">
+    <section class="page-head">
+      <div class="container">
+        <h1 class="page-title">Your cart</h1>
+      </div>
+    </section>
+
+    <section class="cart" aria-label="Cart contents">
+      <div class="container">
+        <div data-cart>
+          <noscript><p class="notice">The cart needs JavaScript.</p></noscript>
+        </div>
+        <p class="sr-only" role="status" data-cart-status></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div class="site-footer__brand">
+        <a class="logo" href="index.html" aria-label="Auren — home">
+          <svg class="logo__mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="#974761"/></svg>
+          <span class="logo__word">Auren</span>
+        </a>
+        <p>Headphones designed, tuned and serviced by one small team. Built to be repaired, not replaced.</p>
+      </div>
+
+      <nav class="site-footer__nav" aria-labelledby="footer-shop">
+        <h2 id="footer-shop">Shop</h2>
+        <ul>
+          <li><a href="catalog.html">All headphones</a></li>
+          <li><a href="catalog.html?category=over-ear">Wireless over-ear</a></li>
+          <li><a href="catalog.html?category=earbuds">True wireless earbuds</a></li>
+          <li><a href="catalog.html?category=studio">Studio &amp; hi-fi</a></li>
+          <li><a href="catalog.html?category=gaming">Gaming</a></li>
+          <li><a href="catalog.html?category=in-ear">In-ear monitors</a></li>
+        </ul>
+      </nav>
+
+      <nav class="site-footer__nav" aria-labelledby="footer-support">
+        <h2 id="footer-support">Support</h2>
+        <ul>
+          <li><a href="help.html#shipping">Shipping</a></li>
+          <li><a href="help.html#returns">Returns</a></li>
+          <li><a href="help.html#warranty">Warranty &amp; repairs</a></li>
+          <li><a href="help.html#faq">Questions</a></li>
+          <li><a href="help.html#contact">Contact us</a></li>
+          <li><a href="cart.html">Your cart</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__nav">
+        <h2>Contact</h2>
+        <address>
+          <a href="https://auren.com">auren.com</a><br>
+          <a href="tel:+15550132040">+1 (555) 013-2040</a><br>
+          Mon–Fri, 9 am – 6 pm ET<br>
+          48 Foundry Lane, Portland, ME 04101
+        </address>
+      </div>
+    </div>
+
+    <div class="container site-footer__bottom">
+      <p>© <span data-copyright-year>2027</span> Auren Audio.</p>
+      <ul>
+        <li><a href="https://artempunin.vercel.app/">Created by Artem Punin</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="toast-region" aria-live="polite" aria-atomic="true" data-toasts></div>
+</body>
+</html>
